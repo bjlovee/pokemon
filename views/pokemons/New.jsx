@@ -10,7 +10,7 @@ class New extends React.Component {
             </nav>
             <form method='POST' action="/pokemon">
                 Name: <input type="text" name="name" placeholder='Name of Pokemon Here'></input><br/>
-                Age: <input type="text" name="color" placeholder='Color of Pokemon Here'></input><br/>
+               Type: <input type="text" name="type" placeholder='Type of Pokemon Here'></input><br/>
                 Is Ready To Fight: <input type="checkbox" name="readyToFight"></input><br/>
                 <input type="submit" value="Submit Pokemon"></input>
             </form>

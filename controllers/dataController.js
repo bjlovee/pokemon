@@ -10,7 +10,7 @@ const dataController = {
                 msg: err.message
                }) 
             } else {
-                res.locals.data.fruits = foundPokemon
+                res.locals.data.pokemons = foundPokemon
                 next()
             }
         })
@@ -44,6 +44,7 @@ const dataController = {
     },
     //Create
     create(req, res, next){
+        console.log(req.body)
         req.body.readyToFight = req.body.readyToFight === 'on'? true : false;
         Pokemon.create(req.body, (err, createdPokemon)=> {
             if(err){

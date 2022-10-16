@@ -2,16 +2,16 @@ const RESOURCE_PATH = '/pokemon'
 
 const viewController = {
     index(req, res, next){
-        res.render('pokemon/Index', res.locals.data)
+        res.render('pokemons/Index', res.locals.data)
     },
     newView(req, res, next){
-        res.render('pokemon/New')
+        res.render('pokemons/New')
     },
     edit(req, res, next){
-        res.render('pokemon/Edit', res.locals.data)
+        res.render('pokemons/Edit', res.locals.data)
     },
     show(req, res, next){
-        res.render('pokemon/Show', res.locals.data)
+        res.render('pokemons/Show', res.locals.data)
     },
     redirectHome(req, res, next){
         res.redirect(RESOURCE_PATH)

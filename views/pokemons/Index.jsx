@@ -9,12 +9,12 @@ class Index extends React.Component{
             <Default title="Pokemons Index Page">
                 <ul>
                     {
-                        pokemons.map((pokemon) => {
-                            const {name, age, readyToFight} = pokemon
+        pokemons.map((pokemon) => {
+                            const {name, type, readyToFight} = pokemon
                             return (
                                 <li key={pokemon._id}>
                                     <a href={`/pokemon/${pokemon._id}`}>
-                                    {name}</a> is {age}
+                                    {name}</a>Type is {type}
                                     
                                      <br/>
                                     {
@@ -24,7 +24,7 @@ class Index extends React.Component{
                                     }
                                     <br/>
                                     <form method="POST" action={`/pokemon/${pokemon._id}?_method=DELETE`}>
-                                        <input type="submit" value={`Delete ${age} ${name}`}/>
+                                        <input type="submit" value={`Delete ${type} ${name}`}/>
                                     </form>
                                 </li>
                             )
