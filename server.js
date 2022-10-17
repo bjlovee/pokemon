@@ -18,9 +18,10 @@ db.once('open', () => {
   console.log('connected to MongoDB Atlas')
 })
 /*Start Middleware */
-app.use(methodOverride('_method'))
-app.use(express.static('public'))
-app.use('/pokemon', require('./controllers/routeController'))
+app.use(methodOverride('_method'));
+app.use(express.static('public'));
+app.use('/images', express.static('images'));
+app.use('/pokemon', require('./controllers/routeController'));
 /* END Middleware */
 
 // Tell the app to listen on a port
